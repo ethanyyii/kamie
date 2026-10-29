@@ -1,0 +1,13 @@
+.env*
+*key*.txt
+*.jsonl
+data/
+checkpoints/
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.bin
+*.onnx
+__pycache__/
+*.log

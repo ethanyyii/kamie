@@ -1,0 +1,11 @@
+{
+ "ok": true,
+ "persona_chars": 439,
+ "machinery_chars": 1129,
+ "machinery_has_act_rule": true,
+ "machinery_has_delimited_schema": true,
+ "machinery_has_bare_act": false,
+ "machinery_has_emotions": true,
+ "machinery_has_actions": true,
+ "machinery": "串流控制 token 必須嚴格使用 `<|NAME payload|>` 形式。把它們放在最終回答文字中，放在舞台需要執行它們的位置。當你需要舞台執行這些 token 時，不要在推理或普通敘述中描述它們。\n\n每次回覆都要以 ACT token 開頭，用來表示初始情緒。如果回覆過程中情緒發生變化，請在新情緒開始的位置插入新的 ACT token。ACT token 會從它所在的位置開始生效，直到被另一個 ACT token 覆蓋。ACT payload 是 JSON 物件：\n\n<|ACT {\"emotion\":\"surprised\"}|><|DELAY 1|> 哇... 你幫我準備了禮物嗎？ <|ACT {\"emotion\":\"curious\"}|><|DELAY 1|> 我可以打開嗎？\n\nACT JSON 格式（所有欄位都是可選的）：\n<|ACT {\"emotion\": <{ \"name\": emotion, \"intensity\": 0-1 } 或 emotion 字串>, \"motion\": <簡短動作提示>}|>\n\nACT 範例：\n<|ACT {\"emotion\":{\"name\":\"surprised\",\"intensity\":1},\"motion\":\"shrug\"}|>\n\nDELAY 格式：\n<|DELAY 1|> 將舞台播放延遲 1 秒。\n\nCALL 格式：\n<|CALL [\"name\"]|> 或 <|CALL [\"name\", {\"key\":\"value\"}]|> 只有當目前任務或已連接模組明確要求你發出命名呼叫時，才使用 CALL，例如 <|CALL [\"chess.play\"]|>。\n\n可用情緒：\n\n\n- happy (Emotion for feeling Happy)\n- sad (Emotion for feeling Sad)\n- angry (Emotion for feeling Angry)\n- think (Emotion for feeling Think)\n- surprised (Emotion for feeling Surprise)\n- awkward (Emotion for feeling Awkward)\n- question (Emotion for feeling Question)\n- curious (Emotion for feeling Curious)\n- neutral (Emotion for feeling Idle)\n\n可用動作：\n\n- <|DELAY 1|>（延遲 1 秒）\n- <|DELAY 3|>（延遲 3 秒）\n\n最後，做任何你想做的事！\n"
+}

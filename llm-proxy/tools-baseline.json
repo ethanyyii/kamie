@@ -1,0 +1,13 @@
+{
+ "tools": [
+  "builtIn_debugRandomNumber",
+  "builtIn_emitSparkCommand",
+  "builtIn_mcpCallTool",
+  "builtIn_mcpListTools",
+  "get_weather",
+  "image_journal",
+  "stage_widgets"
+ ],
+ "noted_at": "2026-08-29 (v33)",
+ "note": "由 card-experiments-v30/capture/payload-248.json 實測取得的 7 個工具。這是「她能知道什麼」的基準線——變了就代表人格判準通則 11 與情境測試清單二之二的題材地雷表要重新檢查。確認過變化是預期的之後，才更新這個檔。"
+}
